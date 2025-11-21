@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <link rel="shortcut icon" type="x-icon" href="logo2.jpg">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gaming Zone</title>
     <link rel="stylesheet" href="style.css">
@@ -12,21 +13,25 @@
 
 <body>
     <header>
-        <h1>GammerZ</h1>
+    <h1>GammerZ</h1>
 
-        <!-- Hamburger Icon (Phone Only) -->
-        <div class="hamburger" onclick="toggleMenu()">
-            &#9776;
-        </div>
+    <!-- Hamburger (only visible on phone) -->
+    <div class="hamburger" onclick="toggleMenu()">
+        ☰
+    </div>
 
-        <nav class="nav">
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Games</a>
-            <a href="#">Contact</a>
+    <!-- Navigation -->
+    <nav class="nav">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Games</a>
+        <a href="#">Contact</a>
+    </nav>
            <a href="login.html"><button class="log-btn">Login</button></a>
-        </nav>
-    </header>
+
+</header>
+
+
 
     <main>
         <div class="home-coll" style="height: 65px;" id="home">
@@ -242,13 +247,13 @@
 
     </script>
 
-    <script>
-        function toggleMenu() {
-            document.querySelector(".nav").classList.toggle("nav-open");
-        }
-    </script>
+ <script>
+function toggleMenu() {
+    document.querySelector(".nav").classList.toggle("nav-open");
+}
+</script>
+
 
 </body>
 
 </html>
-
