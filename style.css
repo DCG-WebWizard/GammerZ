@@ -1,398 +1,557 @@
-       * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            outline: none;
-        }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
 
-        body {
-            font-family: "poppins", sans-serif;
-            line-height: 1.6;
-            background: #17202a;
-            color: #333;
-            /* Space for fixed navbar */
-        }
+body {
+    font-family: "poppins", sans-serif;
+    line-height: 1.6;
+    background: #17202a;
+    color: #333;
+}
 
-        header {
-            background: #17202a;
-            box-shadow: 0px 0px 30px #000;
-            color: #fff;
-            text-align: center;
-            position: fixed;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 65px;
-            z-index: 1000;
-            width: 100%;
-        }
+/* ---------------- HEADER ---------------- */
+
+header {
+    background: #17202a;
+    box-shadow: 0px 0px 30px #000;
+    color: #fff;
+    text-align: center;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 65px;
+    z-index: 1000;
+    width: 100%;
+}
+
+header h1 {
+    color: #00BFFF;
+    font-size: 30px;
+    margin-left: 50px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #D3D3D3;
+    margin-left: 30px;
+    font-weight: bold;
+    position: relative;
+    transition: 0.3s;
+}
+
+.nav a:hover {
+    color: #00BFFF;
+}
+
+.nav a::before {
+    content: '';
+    position: absolute;
+    background: #00BFFF;
+    top: 100%;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    transition: 0.4s;
+}
+
+.nav a:hover::before {
+    width: 100%;
+}
+
+.log-btn {
+    width: 100px;
+    height: 33px;
+    border-radius: 50px;
+    background-color: #00BFFF;
+    border: none;
+    margin-bottom: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 6px;
+    margin-right: 20px;
+    transition: 0.3s;
+}
+
+.log-btn:hover {
+    background: #ffffff;
+    color: #000;
+}
+
+/* ---------------- HOME SECTION ---------------- */
+
+.home {
+    height: 580px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-cen {
+    display: flex;
+}
+
+.home-sec1 {
+    margin-right: 90px;
+    box-shadow: 0px 0px 30px #000;
+    padding: 50px;
+    height: max-content;
+    margin-top: 160px;
+    border-radius: 30px;
+    background: #17202a;
+    transition: 0.4s;
+}
+
+.home-sec1:hover {
+    background: #161c23;
+    box-shadow: 0px 0px 30px #000000;
+}
+
+.home-sec2 img {
+    width: 450px;
+    height: 450px;
+    border-radius: 50% 0px 50% 0px;
+    box-shadow: 0px 0px 30px #000;
+    margin-top: 70px;
+}
+
+.home h2 {
+    font-size: 45px;
+    width: 450px;
+    transition: 0.4s;
+}
+
+.home p {
+    width: 540px;
+    margin-top: 10px;
+    font-size: 14px;
+    transition: 0.4s;
+}
+
+.home-btn {
+    width: 100px;
+    height: 30px;
+    font-size: 15px;
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+    margin-top: 30px;
+    transition: 0.3s;
+}
+
+.home-btn:hover {
+    background: #00BFFF;
+    color: #000;
+}
+
+/* ---------------- ABOUT SECTION ---------------- */
+
+.about-head {
+    text-align: center;
+    font-size: 45px;
+    color: #D3D3D3;
+}
+
+.about-container {
+    padding: 50px;
+    justify-content: center;
+    display: flex;
+    gap: 100px;
+}
+
+.abu-min-img {
+    height: 450px;
+    width: 350px;
+    box-shadow: 0px 0px 30px #000;
+    border-radius: 20px;
+}
+
+.about-text {
+    width: 500px;
+    padding: 50px;
+    box-shadow: 0px 0px 30px #000;
+    border-radius: 10px;
+    height: max-content;
+}
+
+.about-text:hover {
+    background: #161c23;
+    box-shadow: 0px 0px 30px #000000;
+}
+
+.about-text h3 {
+    transition: 0.3s;
+    font-size: 30px;
+}
+
+.about-text p {
+    font-weight: normal;
+    font-size: 14px;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+.Learn-abt {
+    margin-top: 30px;
+    width: 110px;
+    height: 35px;
+    border-radius: 20px;
+    border: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.Learn-abt:hover {
+    background: #00BFFF;
+}
+
+/* ---------------- GAME SECTION ---------------- */
+
+.gam-hed {
+    text-align: center;
+    font-size: 40px;
+    color: #D3D3D3;
+}
+
+main {
+    color: #fff;
+}
+
+.game-grid {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    width: 1500px;
+}
+
+.game-grid-cen {
+    gap: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 1370px;
+}
+
+.game-card {
+    background: #17202a;
+    padding: 5px;
+    border-radius: 4px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 320px;
+    text-align: center;
+    transition: 0.3s;
+    border: 1px solid #00BFFF;
+}
+
+.game-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0px 36px #000;
+    background: #101821;
+}
+
+.game-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.game-card h3 {
+    color: #ffffff;
+    margin: 8px 0;
+}
+
+.game-card p {
+    color: #ffffff;
+    margin: 0 0 12px;
+}
+
+.game-card button {
+    background: #00BFFF;
+    border: none;
+    color: #000;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.game-card button:hover {
+    background: #ffffff;
+}
+
+/* ---------------- CONTACT SECTION ---------------- */
+
+.contact {
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+}
+
+.cont-head {
+    text-align: center;
+    font-size: 50px;
+    color: #D3D3D3;
+}
+
+.contact-container {
+    display: flex;
+    gap: 100px;
+}
+
+.contact-image img {
+    width: 450px;
+    height: 340px;
+    border-radius: 150px 0px 150px 0px;
+    box-shadow: 0px 0px 30px #00BFFF;
+}
+
+.contact-form {
+    background: #161c23;
+    box-shadow: 0px 0px 20px #000;
+    border-radius: 50px;
+    height: max-content;
+    width: 400px;
+    padding: 50px;
+}
+
+.cont-box-m {
+    margin: 10px;
+}
+
+.cc, .cmc {
+    width: 100%;
+    padding: 5px;
+    border: none;
+    color: #0892c0;
+    font-weight: bold;
+}
+
+.cmc {
+    height: 100px;
+}
+
+.cont-btn {
+    margin: 5px;
+    width: 100px;
+    height: 35px;
+    border-radius: 6px;
+    border: none;
+    font-weight: bold;
+    background: #00BFFF;
+    color: #000;
+    font-size: 17px;
+    transition: 0.3s;
+}
+
+.cont-btn:hover {
+    background: #fff;
+    color: #00BFFF;
+}
+
+/* ---------------- FOOTER ---------------- */
+
+footer p {
+    color: #D3D3D3;
+    text-align: center;
+    padding: 10px;
+    margin: 0 50px 25px;
+    background: #0e1218;
+    box-shadow: 0px 0px 18px #000;
+}
+
+section {
+    justify-content: center;
+    display: flex;
+}
+
+/* ========================================================= */
+/*                     RESPONSIVE DESIGN                     */
+/* ========================================================= */
+
+@media (max-width: 768px) {
+
+    /* HEADER */
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    header h1 {
+        margin: 0;
+        font-size: 24px;
+    }
+
+    .nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .nav a {
+        margin-left: 0;
+        font-size: 14px;
+    }
+
+    .log-btn {
+        margin: 0;
+    }
+
+    /* HOME */
+    .home {
+        height: auto;
+        padding: 40px 10px;
+    }
+
+    .home-cen {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .home-sec1 {
+        width: 100%;
+        margin: 120px 0 20px;
+        padding: 25px;
+    }
+
+    .home-sec2 img {
+        width: 90%;
+        height: auto;
+        margin: 20px auto;
+    }
+
+    .home h2 {
+        width: 100%;
+        font-size: 28px;
+    }
+
+    .home p {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    /* ABOUT */
+    .about-container {
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .abu-min-img {
+        width: 90%;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .about-text {
+        width: 100%;
+        padding: 25px;
+    }
+
+    /* GAMES */
+    .game-grid {
+        width: 100%;
+    }
+
+    .game-grid-cen {
+        width: 100%;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .game-card {
+        max-width: 90%;
+    }
+
+    .game-card img {
+        height: 150px;
+    }
+
+    /* CONTACT */
+    .contact-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .contact-image img {
+        width: 90%;
+        height: auto;
+        margin: auto;
+    }
+
+    .contact-form {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .cont-head {
+        font-size: 32px;
+    }
+}
 
 
-        header h1 {
-            color: #00BFFF;
-            font-size: 30px;
-            margin-left: 50px;
-        }
-
-        .nav a {
-            text-decoration: none;
-            color: #D3D3D3;
-            margin-left: 30px;
-            font-weight: bold;
-            position: relative;
-            transition: 0.3s;
-        }
-
-        .nav a:hover {
-            color: #00BFFF;
-        }
-
-        .nav a::before {
-            content: '';
-            position: absolute;
-            background: #00BFFF;
-            top: 100%;
-            left: 0;
-            bottom: 0;
-            height: 2px;
-            width: 0;
-            transition: 0.4s;
-        }
-
-        .nav a:hover::before {
-            width: 100%;
-        }
-
-        .log-btn {
-            width: 100px;
-            height: 33px;
-            border-radius: 50px;
-            background-color: #00BFFF;
-            border: none;
-            margin-bottom: 10px;
-            border: none;
-            font-size: 15px;
-            font-weight: bold;
-            margin-top: 6px;
-            margin-right: 20px;
-            transition: 0.3s;
-        }
-
-        .log-btn:hover {
-            background: #ffffff;
-            color: #000;
-        }
 
 
-        .home {
-            height: 580px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .home-cen{
-            display: flex;
-        }
-        
-        .home-sec1 {
-            margin-right: 90px;
-            box-shadow: 0px 0px 30px #000;
-            padding: 50px;
-            height: max-content;
-            margin-top: 160px;
-            border-radius: 30px;
-            background: #17202a;
-            transition: 0.4s;
-        }
 
-        .home-sec1:hover {
-            background: #161c23;
-            box-shadow: 0px 0px 30px #000000;
 
-            .hm-h2 {
-                color: #00BFFF;
-            }
+/* Hamburger icon hidden on desktop */
+.hamburger {
+    display: none;
+    font-size: 30px;
+    color: #00BFFF;
+    cursor: pointer;
+    margin-right: 20px;
+}
 
-            .hm-p {
-                color: #00BFFF;
-            }
-        }
+/* MOBILE NAVIGATION */
+@media (max-width: 768px) {
 
-        .home-sec2 img {
-            width: 450px;
-            height: 450px;
-            border-radius: 50% 0px 50% 0px;
-            box-shadow: 0px 0px 30px #000;
-            margin-top: 70px;
-        }
+    /* Hide navbar & login button by default */
+    .nav {
+        display: none;
+        flex-direction: column;
+        background: #0f141a;
+        width: 100%;
+        padding: 20px 0;
+        box-shadow: 0px 0px 20px #000;
+    }
 
-        .home h2 {
-            font-size: 45px;
-            width: 450px;
-            transition: 0.4s;
-        }
+    /* When open */
+    .nav.nav-open {
+        display: flex;
+    }
 
-        .home p {
-            width: 540px;
-            margin-top: 10px;
-            font-size: 14px;
-            transition: 0.4s;
+    /* Hamburger visible on phone */
+    .hamburger {
+        display: block;
+    }
 
-        }
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 10px;
+    }
 
-        .home-btn {
-            width: 100px;
-            height: 30px;
-            font-size: 15px;
-            border-radius: 5px;
-            border: none;
-            font-weight: bold;
-            margin-top: 30px;
-            transition: 0.3s;
-        }
+    header h1 {
+        margin-left: 20px;
+        font-size: 26px;
+    }
 
-        .home-btn:hover {
-            background: #00BFFF;
-            color: #000;
-        }
+    /* Style navbar items on phone */
+    .nav a {
+        margin: 15px 0;
+        text-align: center;
+        font-size: 18px;
+    }
 
-        .about-head {
-            text-align: center;
-            font-size: 45px;
-            color: #D3D3D3;
-
-        }
-
-        .about-container {
-            /*    background: #000;   */
-            padding: 50px;
-            justify-content: center;
-            display: flex;
-
-        }
-
-        .about-container {
-            gap: 100px;
-        }
-
-        .abu-min-img {
-            height: 450px;
-            width: 350px;
-            box-shadow: 0px 0px 30px #000;
-            border-radius: 20px;
-        }
-
-        .about-text {
-            width: 500px;
-            padding: 50px;
-            box-shadow: 0px 0px 30px #000;
-            border-radius: 10px;
-            height: max-content;
-        }
-
-        .about-text:hover {
-            background: #161c23;
-            box-shadow: 0px 0px 30px #000000;
-
-            .abt-h3 {
-                color: #00BFFF;
-            }
-
-            .abt-p {
-                color: #00BFFF;
-            }
-        }
-
-        .about-text h3 {
-            transition: 0.3s;
-            font-size: 30px;
-        }
-
-        .about-text p {
-            font-weight: normal;
-            font-size: 14px;
-            transition: 0.3s;
-            margin-top: 10px;
-        }
-
-        .Learn-abt {
-            margin-top: 30px;
-            width: 110px;
-            height: 35px;
-            border-radius: 20px;
-            border: none;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-
-        .Learn-abt:hover {
-            background: #00BFFF;
-        }
-
-        .gam-hed {
-            text-align: center;
-            font-size: 40px;
-            color: #D3D3D3;
-        }
-
-        main {
-            color: #fff;
-        }
-
-        .game-grid {
-            margin-top: 50px;
-            display: flex;
-            justify-content: center;
-            padding: 20px;
-            width: 1500px;
-        }   
-        .game-grid-cen{
-            gap: 25px;
-            display: flex;
-            flex-wrap: wrap;
-            width: 1370px;
-        }
-        .game-card {
-            background: #17202a;
-            padding: 5px;
-            border-radius: 4px;
-            overflow: hidden;
-            width: 100%;
-            max-width: 320px;
-            text-align: center;
-            transition: transform 0.3s, box-shadow 0.3s;
-            border: 1px solid #00BFFF;
-        }
-
-        .game-card:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0px 36px #000;
-            background: #101821;
-        }
-
-        .game-card img {
-            width: 100%;
-            height: 180px;
-            object-fit: cover;
-        }
-
-        .game-card h3 {
-            margin: 0.5rem 0;
-            color: #ffffff;
-        }
-
-        .game-card p {
-            color: #ffffff;
-            margin: 0 0 1rem;
-            padding: 0 1rem;
-        }
-
-        .game-card button {
-            background: #00BFFF;
-            border: none;
-            color: #000;
-            padding: 0.5rem 1rem;
-            cursor: pointer;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: background 0.3s;
-        }
-
-        .game-card button a {
-            color: #000000;
-            text-decoration: none;
-
-        }
-
-        .game-card button:hover {
-            background: #ffffff;
-        }
-
-        .contact {
-            display: flex;
-            justify-content: center;
-            padding: 50px;
-        }
-
-        .cont-head {
-            text-align: center;
-            font-size: 50px;
-            color: #D3D3D3;
-        }
-
-        .contact-container {
-            display: flex;
-            gap: 100px;
-        }
-
-        .contact-image img {
-            width: 450px;
-            height: 340px;
-            border-radius: 150px 0px 150px 0px;
-            box-shadow: 0px 0px 30px #00BFFF;
-        }
-
-        .contact-form {
-            background: #161c23;
-            box-shadow: 0px 0px 20px #000;
-            border-radius: 50px;
-            height: max-content;
-            width: 400px;
-            padding: 50px;
-        }
-
-        .cont-box-m {
-            margin: 10px;
-        }
-
-        .cc {
-            width: 100%;
-            padding: 5px;
-            height: 40px;
-            color: #0892c0;
-            border: none;
-            font-weight: bold;
-        }
-
-        .cmc {
-            width: 100%;
-            height: 100px;
-            padding: 5px;
-            border: none;
-            color: #0892c0;
-            font-weight: bold;
-
-        }
-
-        .cont-btn {
-            margin: 5px;
-            width: 100px;
-            height: 35px;
-            border-radius: 6px;
-            border: none;
-            font-weight: bold;
-            background: #00BFFF;
-            color: #000;
-            font-size: 17px;
-            transition: 0.3s;
-        }
-
-        .cont-btn:hover {
-            background: #fff;
-            color: #00BFFF;
-        }
-
-        footer p {
-            color: #D3D3D3;
-            text-align: center;
-            padding: 10px;
-            margin-left: 50px;
-            margin-right: 50px;
-            margin-bottom: 25px;
-            background: #0e1218;
-            box-shadow: 0px 0px 18px #000;
-        }
-        section{
-            justify-content: center;
-            display: flex;
-        }
+    .log-btn {
+        margin: 15px auto;
+    }
+}
