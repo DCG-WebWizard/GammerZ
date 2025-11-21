@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register | GammerZ</title>
+    <link rel="shortcut icon" href="logo2.jpg" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: url(img/pexels-tombrand-1637438.jpg) no-repeat top left/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .register-container {
+            backdrop-filter: blur(5px);
+            padding: 40px 50px;
+            border-radius: 20px;
+            box-shadow: 0px 0px 15px #ffffff;
+            width: 100%;
+            max-width: 450px;
+        }
+
+        .register-container h2 {
+            color: #00BFFF;
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            color: #D3D3D3;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            border: none;
+            background: #0e1218;
+            color: #00BFFF;
+            font-size: 15px;
+        }
+
+        .form-group input:focus {
+            outline: 2px solid #00BFFF;
+        }
+
+        .register-btn {
+            width: 100%;
+            padding: 12px;
+            background-color: #00BFFF;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .register-btn:hover {
+            background-color: #ffffff;
+            color: #000;
+        }
+
+        .bottom-text {
+            text-align: center;
+            margin-top: 20px;
+            color: #D3D3D3;
+            font-size: 14px;
+        }
+
+        .bottom-text a {
+            color: #00BFFF;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .bottom-text a:hover {
+            text-decoration: underline;
+        }
+
+
+          .GoBack{
+            margin-top: 40px;
+       
+        }
+     
+        .GoBack a{
+            text-decoration: none;
+            color: #000000;
+            font-weight: bold;
+
+
+            background: #00BFFF;
+            width: max-content;
+            height: max-content;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        .GoBack a:hover{
+            background: #fff;
+            color: #000000;
+        }
+    </style>
+</head>
+<body>
+
+<div class="register-container">
+    <h2>Create Your Account</h2>
+    <form action="https://formspree.io/f/mrbqvjrv" method="POST">
+        <div class="form-group">
+            <label for="fullname">Full Name</label>
+            <input type="text" id="fullname" name="fullname" required placeholder="John Doe">
+        </div>
+        <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required placeholder="example@email.com">
+        </div>
+        <div class="form-group">
+            <label for="password">Create Password</label>
+            <input type="password" id="password" name="password" required placeholder="••••••••">
+        </div>
+        <div class="form-group">
+            <label for="confirm-password">Confirm Password</label>
+            <input type="password" id="confirm-password" name="confirm-password" required placeholder="••••••••">
+        </div>
+        <button type="submit" class="register-btn">Register</button>
+    </form>
+    <div class="bottom-text">
+        Already have an account? <a href="login.html">Login here</a>
+    </div>
+
+    
+      <div class="GoBack">
+        <a href="index.html">Go Back</a>
+    </div>
+</div>
+
+</body>
+</html>
